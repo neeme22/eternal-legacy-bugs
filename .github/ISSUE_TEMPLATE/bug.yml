@@ -1,0 +1,53 @@
+name: Bug
+description: Algo del juego no funciona como debería.
+title: "[Bug] "
+labels: ["Nuevo"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Gracias por avisar. Cuanto más concreto, antes se arregla. Busca antes en la lista por si ya lo ha publicado alguien.
+  - type: dropdown
+    id: categoria
+    attributes:
+      label: ¿De qué es?
+      options:
+        - Misión
+        - Criatura o jefe
+        - Objeto o botín
+        - Hechizo, talento o clase
+        - Mapa, zona o terreno
+        - Interfaz o addons
+        - Transfiguración
+        - Tienda
+        - Launcher o actualización
+        - Otro
+    validations:
+      required: true
+  - type: textarea
+    id: que_pasa
+    attributes:
+      label: ¿Qué pasa?
+      description: Qué ves y qué esperabas ver.
+    validations:
+      required: true
+  - type: textarea
+    id: como_repetirlo
+    attributes:
+      label: ¿Cómo se repite?
+      description: Los pasos para que vuelva a pasar, si los sabes.
+      placeholder: |
+        1. Voy a...
+        2. Hablo con...
+        3. Pasa...
+  - type: input
+    id: personaje
+    attributes:
+      label: Personaje y dónde estabas
+      description: Nombre del personaje, zona y, si puedes, las coordenadas.
+      placeholder: "Keyastus, Montañas de Alterac, 38,52"
+  - type: textarea
+    id: capturas
+    attributes:
+      label: Capturas
+      description: Arrastra o pega aquí las capturas. Las del juego están en la carpeta Screenshots del WoW.
